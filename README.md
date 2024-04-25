@@ -20,7 +20,22 @@ Execute the C Program for the desired output.
 # PROGRAM:
 
 ## 1.To Write a C program that illustrates files copying 
-
+```
+#include <unistd.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdlib.h>
+int main()
+{
+char block[1024];
+int in, out;
+int nread;
+in = open("filecopy.c", O_RDONLY);
+out = open("file.out", O_WRONLY|O_CREAT, S_IRUSR|S_IWUSR);
+while((nread = read(in,block,sizeof(block))) > 0)
+write(out,block,nread);
+exit(0);}
+```
 
 
 
@@ -34,6 +49,7 @@ Execute the C Program for the desired output.
 
 ## OUTPUT
 
+![Screenshot (250)](https://github.com/RahiniAchudhan/Linux-File-IO-Systems-locking/assets/145742838/96a4d6bf-c10d-4e3c-a78f-a7589bcfa964)
 
 
 
