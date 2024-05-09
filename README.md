@@ -21,8 +21,7 @@ Execute the C Program for the desired output.
 
 ## 1.To Write a C program that illustrates files copying 
 ```
-#include <unistd.h>
-#include <sys/stat.h>
+include <sys/stat.h>
 #include <fcntl.h>
 #include <stdlib.h>
 int main()
@@ -36,7 +35,6 @@ while((nread = read(in,block,sizeof(block))) > 0)
 write(out,block,nread);
 exit(0);}
 ```
-
 
 
 
@@ -81,19 +79,20 @@ getchar();
 close (fd);
 return 0;
 }
+
 ```
 
 
+# OUTPUT
 
-## OUTPUT
-# Program 1:
+## C program that illustrates files copying
 
-![Screenshot (250)](https://github.com/RahiniAchudhan/Linux-File-IO-Systems-locking/assets/145742838/96a4d6bf-c10d-4e3c-a78f-a7589bcfa964)
+![image](https://github.com/sabithapaulraj/Linux-File-IO-Systems-locking/assets/118343379/3f458eaa-76b8-4625-b729-629030fcff4a)
 
-# Program 2:
 
-![Screenshot (251)](https://github.com/RahiniAchudhan/Linux-File-IO-Systems-locking/assets/145742838/5bec0538-d5e2-440e-afc5-1f7fa6790ff6)
+## C program that illustrates files locking
 
+![image](https://github.com/sabithapaulraj/Linux-File-IO-Systems-locking/assets/118343379/16848c5e-ad93-40d8-8f7c-7a03e66d238b)
 
 
 # RESULT:
